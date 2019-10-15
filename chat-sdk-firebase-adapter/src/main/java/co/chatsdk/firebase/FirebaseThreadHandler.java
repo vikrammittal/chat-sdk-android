@@ -220,7 +220,7 @@ public class FirebaseThreadHandler extends AbstractThreadHandler {
                 for(Thread thread : getThreads(ThreadType.Private1to1, reuseDeletedThreads, true)) {
                     if(thread.getUsers().size() == 2 &&
                             thread.containsUser(currentUser) &&
-                            thread.containsUser(otherUser))
+                            thread.containsUser(otherUser) && thread.getName().equals(name))
                     {
                         jointThread = thread;
                         break;
